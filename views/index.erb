@@ -1,0 +1,27 @@
+<html>
+<head>
+  <script src="javascripts/jquery-1.5.2.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+	  $("button").click(function(){
+	    $.get("/check",
+	    { 
+	    		guess:$("#guess").val()
+	    },
+	   function(data,status){
+	    	 $("p#ans").append($("#guess").val() + " : " + data + "</br>");
+	   });
+	  });
+    });
+  </script>
+
+
+</head>
+<body>
+	<body>
+  			Guess: <input type="text" id="guess">
+  			<button>Try</button>
+  </body>
+  <p id='ans'></p>
+</body>
+</html>
