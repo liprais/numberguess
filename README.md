@@ -7,7 +7,7 @@ you will get one "B".
 * If you get it all right ,you will get a "match!".
 
 #Deployment
-* ruby sinatra & jQuery
-* use "ruby g.rb" to start
-* vist "127.0.0.1:4567" to enjoy!
-* once you beat the game,please restart the app to enjoy another round
+* Ruby Sinatra & jQuery
+* Use "ruby g.rb" to start
+* Visit "127.0.0.1:4567" to enjoy!
+* Once you beat the game,please restart the app to enjoy another round
