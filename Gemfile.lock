@@ -14,4 +14,4 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  sinatra (= 1.4.4)
+  sinatra
