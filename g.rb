@@ -43,11 +43,17 @@ class NumberGuess < Sinatra::Base
     guess = params[:guess].split("")
     numb3r = settings.number.join.split("")
     ans = checkNumber(numb3r,guess)
-    result = 
-    case when ans == '4A0B' then "match!"
-         else ans  
+    if guess.length == 4
+      result = 
+      case when ans == '4A0B' then "match!"
+          else ans  
+      end
+    else 
+      "please enter four digit number :-)"
     end
   end
+  
+  set :bind, '153.65.171.188'
   run!
 end
 
