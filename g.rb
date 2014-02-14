@@ -53,8 +53,8 @@ class NumberGuess < Sinatra::Base
     end
   end
   
-  set :bind, '153.65.171.188'
-  run!
+  #set :bind, '153.65.171.188'
+  #run!
 end
 
 
