@@ -43,10 +43,11 @@ class NumberGuess < Sinatra::Base
   end
   
   get "/check" do 
+    re = /\d{4}/
     guess = params[:guess].split("")
     numb3r = session["number"].join.split("")
     ans = checkNumber(numb3r,guess)
-    if guess.length == 4
+    if re.match(guess.join) && guess.length == 4 && guess.uniq.length == 4
       result = 
       case when ans == '4A0B' then "match!"
           else ans  
