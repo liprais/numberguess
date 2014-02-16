@@ -11,3 +11,8 @@ you will get one "B".
 * Use "ruby g.rb" to start
 * Visit "127.0.0.1:4567" to enjoy!
 * Once you beat the game,please restart the app to enjoy another round
+
+#Example
+* please take a look at <http://numberguess.herokuapp.com>
+
+#ENJOY !
