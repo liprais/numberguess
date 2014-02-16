@@ -19,9 +19,11 @@ end
 
 class NumberGuess < Sinatra::Base
   
+  #enable :sessions
+  
   include Numb3rs
   
-  def self.generateNumber
+  def generateNumber
     numb3r = []
     while numb3r.length < 4
       a = rand(10)
@@ -31,17 +33,18 @@ class NumberGuess < Sinatra::Base
   end
 
   configure do
-    a = NumberGuess.generateNumber
-    set :number,a
+    enable :sessions
   end
-  
+    
   get "/" do 
+    @a = generateNumber
+    session["number"] = @a #generateNumber.to_s
     erb:index
   end
   
   get "/check" do 
     guess = params[:guess].split("")
-    numb3r = settings.number.join.split("")
+    numb3r = session["number"].join.split("")
     ans = checkNumber(numb3r,guess)
     if guess.length == 4
       result = 
@@ -52,8 +55,7 @@ class NumberGuess < Sinatra::Base
       "please enter four digit number :-)"
     end
   end
-  
-  #set :bind, '153.65.171.188'
+    
   run!
 end
 
